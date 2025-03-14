@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "setuptools_scm>=7",
+    "tomli>=1.0.0; python_version < '3.11'",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conda-oci"
+authors = [
+    {name = "Matthew R. Becker", email = "becker.mr@gmail.com"},
+]
+description = "tools for distributing conda packages as containers in OCI registries"
+dynamic = ["version"]
+license = {file = "LICENSE"}
+readme = "README.md"
+
+[project.urls]
+home = "https://github.com/conda-incubator/conda-oci"
+
+[tool.setuptools_scm]
+write_to = "conda_oci/_version.py"
+write_to_template = "__version__ = '{version}'\n"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
+preview = true
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 120

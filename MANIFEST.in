@@ -1,0 +1,2 @@
+include conda_oci/_version.py
+include LICENSE
