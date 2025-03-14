@@ -34,4 +34,4 @@ jobs:
       - name: test
         shell: bash -el {0}
         run: |
-          pytest -vvs tests
+          pytest -vvs conda_oci

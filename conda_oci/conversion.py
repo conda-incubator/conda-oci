@@ -13,22 +13,12 @@ def decode_pkg_from_oci(name):
 
 def encode_version_build_to_oci(version_or_build):
     """Encode a conda package version or build string to an OCI image tag."""
-    return (
-        version_or_build
-        .replace("_", "__")
-        .replace("+", "_P")
-        .replace("!", "_N")
-    )
+    return version_or_build.replace("_", "__").replace("+", "_P").replace("!", "_N")
 
 
 def decode_version_build_from_oci(version_or_build):
     """Decode an OCI image tag to a conda package version or build string."""
-    return (
-        version_or_build
-        .replace("_N", "!")
-        .replace("_P", "+")
-        .replace("__", "_")
-    )
+    return version_or_build.replace("_N", "!").replace("_P", "+").replace("__", "_")
 
 
 def encode_conda_dist_to_oci_dist(dist):

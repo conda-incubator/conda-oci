@@ -9,7 +9,9 @@ VALID_NAME_RE = re.compile(
 VALID_TAG_RE = re.compile(r"^[a-zA-Z0-9_][a-zA-Z0-9._-]{0,127}$")
 
 # see conda/schemas
-VALID_CONDA_PKG_NAME_RE = re.compile(r"^(([a-z0-9])|([a-z0-9_](?!_)))[._-]?([a-z0-9]+(\.|-|_|$))*$")
+VALID_CONDA_PKG_NAME_RE = re.compile(
+    r"^(([a-z0-9])|([a-z0-9_](?!_)))[._-]?([a-z0-9]+(\.|-|_|$))*$"
+)
 VALID_CONDA_CHANNEL_RE = re.compile(r"^[a-z0-9]+((-|_|.)[a-z0-9]+)*$")
 VALID_CONDA_SUBDIR_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 VALID_CONDA_LABEL_RE = re.compile(r"^[a-zA-Z][0-9a-zA-Z_\-\.\/:\s]*")
