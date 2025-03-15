@@ -1,0 +1,10 @@
+name: conda-oci
+channels:
+  - conda-forge
+dependencies:
+  - conda
+  # dev deps
+  - setuptools-scm
+  - setuptools
+  - pip
+  - pytest
